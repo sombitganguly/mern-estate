@@ -1,6 +1,7 @@
 import { FaSearch } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import default1 from '../assets/default.png'
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
@@ -35,7 +36,7 @@ export default function Header() {
           </Link>
           <Link to='/profile'>
             {currentUser ? 
-              <img className='rounded-full h-7 w-7 object-cover' src={currentUser.avatar} alt='profile' />
+              <img className='rounded-full h-7 w-7 object-cover' src={default1} alt='profile' />
              : 
               <li className=' text-slate-700 hover:underline'> Sign in</li>
             }
