@@ -4,8 +4,8 @@ import { errorHandler } from '../utils/error.js';
 import Listing from '../models/listing.model.js';
 
 export const updateUser = async (req, res, next) => {
-  if (req.user.id !== req.params.id)
-    return next(errorHandler(401, 'You can only update your own account!'));
+  //if (req.user.id !== req.params.id)
+    //return next(errorHandler(401, 'You can only update your own account!'));
   try {
     if (req.body.password) {
       req.body.password = bcryptjs.hashSync(req.body.password, 10);
@@ -52,7 +52,7 @@ export const deleteUser = async (req, res, next) => {
     } else {
       return next(errorHandler(401, 'You can only view your own listings!'));
     }
-  };
+  }
   
   export const getUser = async (req, res, next) => {
     try {
