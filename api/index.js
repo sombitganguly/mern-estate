@@ -26,7 +26,7 @@ app.listen(3000, () => {
 });
 
 const corsOptions = {
-  origin: ["https://sombit-estate.onrender.com" , "http://localhost:5173/"],
+  origin: ["https://sombit-estate.onrender.com" , "http://localhost:5173"],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
 };
