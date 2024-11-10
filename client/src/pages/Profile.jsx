@@ -102,6 +102,7 @@ export default function Profile() {
       dispatch(deleteUserStart());
       const res = await fetch(`https://sombit-estate-backend.onrender.com/api/user/delete/${currentUser._id}`, {
         method: 'DELETE',
+        credentials: 'include',
       });
       const data = await res.json();
       if (data.success === false) {

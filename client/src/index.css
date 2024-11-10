@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: rgb(241, 245, 241);
+body {
+    background-color: rgb(241, 245, 241); 
+    background-image: url('/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+@media (max-width: 768px) {
+    body {
+        background-repeat: no-repeat; 
+        background-position: center; 
+    }
 }
