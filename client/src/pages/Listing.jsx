@@ -50,6 +50,7 @@ export default function Listing() {
 
   return (
     <main>
+      
       {loading && <p className='text-center my-7 text-2xl'>Loading...</p>}
       {error && (
         <p className='text-center my-7 text-2xl'>Something went wrong!</p>
